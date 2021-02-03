@@ -217,21 +217,85 @@
 
 // let agil = new Mahasiswa('Agil', 10);
 
+//latihan
+// function Bahagiaku(nama, energi){ 
+//     this.nama = nama;
+//     this.energi = energi;
+// }
 
-function Bahagiaku(nama, energi){ 
-    this.nama = nama;
-    this.energi = energi;
-}
+// Bahagiaku.prototype.senyum = function (porsi) {
+//     this.energi += porsi;
+//         return `Hallo "${this.nama}", terima kasih udh senyum :) , bahagiaku makin nambah jadi ${this.energi} `;
+// }
 
-Bahagiaku.prototype.senyum = function (porsi) {
-    this.energi += porsi;
-        return `Hallo "${this.nama}", terima kasih udh senyum :) , bahagiaku makin nambah jadi ${this.energi} `;
-}
+// Bahagiaku.prototype.ngambek = function (porsi) {
+//     this.energi -= porsi;
+//         return `Hallo "${this.nama}", maaf udh bikin ngambek :( , bahagiaku berkurang jadi ${this.energi} `;
+// }
 
-Bahagiaku.prototype.ngambek = function (porsi) {
-    this.energi -= porsi;
-        return `Hallo "${this.nama}", maaf udh bikin ngambek :( , bahagiaku berkurang jadi ${this.energi} `;
-}
+// let aristaParadiba = new Bahagiaku('Mama', 5);
+// let elzioDsae = new Bahagiaku('Jagoan Ayah', 5);
 
-let aristaParadiba = new Bahagiaku('Mama', 5);
-let elzioDsae = new Bahagiaku('Jagoan Ayah', 5);
+//----------------closure--------------
+//1
+// function init () {
+//     let nama = 'Agil';
+//     function tampilNama() {
+//         console.log(nama);
+//     }
+//     tampilNama();
+// }
+// init();
+//2
+// let add = (function () {
+//     let counter = 0;
+//     return function () {
+//         return ++counter;
+//     }
+    
+// })();
+
+// counter = 100;
+
+// console.log(add());
+// console.log(add());
+// console.log(add());
+
+//------------Arrow function-----------
+//function expression
+// const tampilNama = function (nama) {
+//     return `Halo, ${nama}`;
+// }
+
+// console.log(tampilNama('agil'));
+
+// //Arrow
+// const callName = nama =>  `halo, ${nama}`;
+// console.log(callName('agil arrow'));
+
+// const callTime = (nama, waktu) => {
+//     return `halo, ${nama} ${waktu}`;
+//  }
+// console.log(callTime('agil arrow 2','10'));
+
+// const helloWorld = () => 'Hellow World';
+// console.log(helloWorld());
+
+// let mahasiswa = ['agil','sae','cahya'];
+
+// let jumlahHuruf = mahasiswa.map(function (nama) {
+//     return nama.length;
+// });
+// console.log(jumlahHuruf);
+
+// let mahasiswa = ['agil','sae','cahya'];
+
+// let jumlahHuruf = mahasiswa.map(nama => nama.length);
+// console.log(jumlahHuruf);
+
+let mahasiswa = ['agil','sae','cahya'];
+
+let jumlahHuruf = mahasiswa.map(nama => ({nama: nama, jmlHuruf: nama.length}));
+console.table(jumlahHuruf);
+
+
